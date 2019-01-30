@@ -11,3 +11,10 @@ allow hal_power_default sysfs_devices_system_cpu:file { write };
 allow hal_power_default vendor_latency_device:chr_file { write open };
 allow hal_power_default property_socket:sock_file { write };
 set_prop(hal_power_default, power_prop)
+
+allow hal_power_default proc_touchpanel:file { w_file_perms read };
+allow hal_power_default proc_touchpanel:dir search;
+
+# Allow hal_power_default to write to dt2w nodes
+allow hal_power_default input_device:dir search;
+allow hal_power_default input_device:chr_file rw_file_perms;
