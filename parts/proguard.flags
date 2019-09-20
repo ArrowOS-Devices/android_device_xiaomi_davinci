@@ -5,3 +5,7 @@
 -keep class org.lineageos.settings.popupcamera.* {
   *;
 }
+
+-keep public class org.lineageos.settings.keyhandler.* implements com.android.internal.os.DeviceKeyHandler {
+    public <init>(android.content.Context);
+}
