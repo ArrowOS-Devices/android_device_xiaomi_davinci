@@ -50,8 +50,7 @@ std::vector<std::string> ro_props_default_source_order = {
     "vendor.",
 };
 
-void property_override(char const prop[], char const value[], bool add = true)
-{
+void property_override(char const prop[], char const value[], bool add = true) {
     prop_info *pi;
 
     pi = (prop_info *) __system_property_find(prop);
@@ -61,22 +60,21 @@ void property_override(char const prop[], char const value[], bool add = true)
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void set_ro_build_prop(const std::string &prop, const std::string &value) {
+void set_ro_prop(const std::string &prop_type, const std::string &prop, const std::string &value) {
     for (const auto &source : ro_props_default_source_order) {
-        auto prop_name = "ro." + source + "build." + prop;
-        if (source == "")
-            property_override(prop_name.c_str(), value.c_str());
-        else
+	if (prop_type == "build") {
+            auto prop_name = "ro." + source + "build." + prop;
+            if (source == "")
+                property_override(prop_name.c_str(), value.c_str());
+            else
+                property_override(prop_name.c_str(), value.c_str(), false);
+       	}
+	if (prop_type == "product") {
+            auto prop_name = "ro.product." + source + prop;
             property_override(prop_name.c_str(), value.c_str(), false);
+        }
     }
-};
-
-void set_ro_product_prop(const std::string &prop, const std::string &value) {
-    for (const auto &source : ro_props_default_source_order) {
-        auto prop_name = "ro.product." + source + prop;
-        property_override(prop_name.c_str(), value.c_str(), false);
-    }
-};
+}
 
 void vendor_load_properties() {
     std::string region;
@@ -112,9 +110,9 @@ void vendor_load_properties() {
     fingerprint = "Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys";
     description = "dipper-user 8.1.0 OPM1.171019.011 V9.5.5.0.OEAMIFA release-keys";
 
-    set_ro_build_prop("fingerprint", fingerprint);
-    set_ro_product_prop("device", device);
-    set_ro_product_prop("model", model);
+    set_ro_prop("build","fingerprint", fingerprint);
+    set_ro_prop("product","device", device);
+    set_ro_prop("product","model", model);
     property_override("ro.build.description", description.c_str());
     if (mod_device != "") {
         property_override("ro.product.mod_device", mod_device.c_str());
