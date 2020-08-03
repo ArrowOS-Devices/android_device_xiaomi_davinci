@@ -966,3 +966,6 @@ vendor/bin/cnss-daemon
 
 # Xiaomi MAC
 vendor/bin/nv_mac
+
+# Power-off charging daemon
+bin/charger:bin/charger
