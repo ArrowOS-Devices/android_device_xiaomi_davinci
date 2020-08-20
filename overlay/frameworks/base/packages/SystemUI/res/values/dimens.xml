@@ -26,4 +26,6 @@
 
     <!-- Margin on the left side of the carrier text on Keyguard -->
     <dimen name="keyguard_carrier_text_margin">44px</dimen>
+
+    <dimen name="rounded_corner_content_padding">10dp</dimen>
 </resources>
