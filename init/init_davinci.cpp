@@ -107,8 +107,8 @@ void vendor_load_properties() {
 
     // SafetyNet workaround
     property_override("ro.boot.verifiedbootstate", "green");
-    fingerprint = "Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys";
-    description = "dipper-user 8.1.0 OPM1.171019.011 V9.5.5.0.OEAMIFA release-keys";
+    fingerprint = "google/sunfish/sunfish:11/RP1A.200720.011/6746289:user/release-keys";
+    description = "sunfish-user 11 RP1A.200720.011 6746289 release-keys";
 
     set_ro_prop("build","fingerprint", fingerprint);
     set_ro_prop("product","device", device);
