@@ -87,6 +87,19 @@ vendor/lib/libbthost_if.so
 vendor/lib/vendor.qti.hardware.bluetooth_audio@2.0.so
 
 # Camera
+lib/libcameraservice.so|d8d91f597ddb673bfccf7fd3b6b5c5babb03347f
+lib64/libcameraservice.so|b1c81cffcc0aa890d88d66ef978ee16b84a37d9f
+lib64/libOpenCL.so|21897637e702c4a97eb748934e9f1fc8880881c5
+vendor/bin/hw/android.hardware.camera.provider@2.4-service_64|92c6df6b22394c005e3641371da519a9f40e35a4
+vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc|0cf3231341a4f78df856b21d243117150cbea337
+vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so|af3e76c0b04df9c9ad8ee24cb917a4f718acf3ca
+vendor/lib64/android.hardware.camera.provider@2.4-external.so|ecf1d5d61e3f2655249378819487eedd1848ca7c
+vendor/lib64/android.hardware.camera.provider@2.4-legacy.so|49de6cbab7d21fec492ecfda620e71e0c6f50920
+vendor/lib64/vendor.qti.hardware.camera.device@1.0.so|0b958fff29f3d82b6d3502a6ef0c5b656d3b20f8
+vendor/lib/android.hardware.camera.provider@2.4-external.so|57d97d949deba100b92f7a6b989d1350c3775fff
+vendor/lib/android.hardware.camera.provider@2.4-legacy.so|a92a86a3c10571cb68b4d06e57d390c37163ffba
+vendor/lib/vendor.qti.hardware.camera.device@1.0.so|88b1c4571d1b288e0c4c26f9e9815528fe9b95f4
+vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so|46489007ffc41b037d3bd0eb13f481d7b210f55e
 vendor/bin/remosaic_daemon
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
