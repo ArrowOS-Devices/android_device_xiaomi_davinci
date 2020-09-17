@@ -411,7 +411,10 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0_system \
     android.hidl.manager@1.0 \
-    android.hidl.manager@1.0_system
+    android.hidl.manager@1.0_system \
+    libhidltransport \
+    libhidltransport.vendor
+
 
 # WiFi
 PRODUCT_PACKAGES += \
@@ -446,3 +449,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# Binder
+ PRODUCT_PACKAGES += \
+    libhwbinder \
+    libhwbinder.vendor
+
