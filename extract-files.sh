@@ -82,14 +82,7 @@ if [ -z "${SRC}" ]; then
 fi
 
 function blob_fixup() {
-
     case "${1}" in
-    lib64/libwfdnative.so)
-        $PATCHELF_TOOL --remove-needed "android.hidl.base@1.0.so" "${2}"
-        ;;
-    lib64/libfm-hci.so)
-        $PATCHELF_TOOL --remove-needed "android.hidl.base@1.0.so" "${2}"
-        ;;
     vendor/lib64/hw/camera.qcom.so)
         $PATCHELF_TOOL --remove-needed "libMegviiFacepp-0.5.2.so" "${2}"
         $PATCHELF_TOOL --remove-needed "libmegface.so" "${2}"
