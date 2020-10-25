@@ -314,6 +314,9 @@ PRODUCT_PACKAGES += \
     librilutils \
     librmnetctl
 
+PRODUCT_PACKAGES += \
+    libavservices_minijail.vendor
+
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_xiaomi
