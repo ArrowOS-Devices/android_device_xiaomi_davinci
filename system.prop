@@ -52,3 +52,6 @@ wifi.interface=wlan0
 
 # LMKD
 ro.config.low_ram=false
+
+# SurfaceFlinger brightness tweak
+ro.sf.force_light_brightness=1
