@@ -86,6 +86,9 @@ function blob_fixup() {
     vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so)
         $PATCHELF_TOOL --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
+    system_ext/lib64/libwfdnative.so)
+        $PATCHELF_TOOL --remove-needed "android.hidl.base@1.0.so" "${2}"
+        ;;
     vendor/lib64/hw/camera.qcom.so)
         $PATCHELF_TOOL --remove-needed "libMegviiFacepp-0.5.2.so" "${2}"
         $PATCHELF_TOOL --remove-needed "libmegface.so" "${2}"
