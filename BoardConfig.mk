@@ -106,7 +106,6 @@ USE_DEVICE_SPECIFIC_GPS := true
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest.xml
 DEVICE_MANIEFST_FILE += $(DEVICE_PATH)/configs/hidl/vendor.qti.gnss@3.0-service.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
-ODM_MANIFEST_FILES += $(DEVICE_PATH)/configs/hidl/manifest-qva.xml
 ODM_MANIFEST_SKUS += \
     davinci
 
