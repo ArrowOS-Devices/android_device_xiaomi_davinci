@@ -359,14 +359,6 @@ vendor/lib64/libsdm-disp-vndapis.so|42f536763a2f91dcbae5b4b7214e652283c389d6
 vendor/lib64/libsdmextension.so|0aed8ab6ecf878ae57ecba4b8a9bfb0d184ab5f7
 vendor/lib64/libtinyxml2_1.so|621dbc8e3d0529b9ee35393698de82ea006ca7fa
 
-# Display (HWC)
-vendor/lib64/hw/hwcomposer.sm6150.so
-vendor/lib64/libclient2slpi.notifier.so
-vendor/lib64/libsdmcore.so
-vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so
-
 # Display calibration
 vendor/etc/dsi_ss_fhd_ea_f10_cmd_display_mi.xml
 vendor/etc/dsi_ss_fhd_eb_f10_cmd_display_mi.xml
