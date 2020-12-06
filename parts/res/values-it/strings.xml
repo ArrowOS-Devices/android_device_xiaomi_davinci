@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 The LineageOS Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Popup camera settings -->
+    <string name="popup_title">Impostazioni fotocamere frontale</string>
+    <string name="popup_led_title">LED camera</string>
+    <string name="popup_led_summary">Abilita LED luce quando la fotocamera frontale appare e si ritrae</string>
+    <string name="popup_sound_title">Sound effects</string>
+    <string name="popup_sound_muqin">Xilofono</string>
+    <string name="popup_sound_yingyan">Condor</string>
+    <string name="popup_sound_mofa">Magico</string>
+    <string name="popup_sound_jijia">Robot</string>
+    <string name="popup_sound_chilun">Ingranaggio</string>
+    <string name="popup_sound_cangmen">Porta della cabina</string>
+    <string name="popup_calibration_title">Calibrazione</string>
+    <string name="popup_calibration_summary">Calibrare la fotocamera frontale</string>
+    <string name="popup_calibration_warning_title">Calibrazione del motore</string>
+    <string name="popup_calibration_warning_text">Non necessari uso della calibrazione può causare danno permanente. Calibra la fotocamera solamente qunado è necessario i.e se la camera non muove normalmente o è nel una posizione sbagliata!</string>
+
+    <!-- DC dimming settings -->
+    <string name="dc_dimming_enable_title">DC Dimming</string>
+    <string name="dc_dimming_enable_summary">Riduce l\'affaticamento deglio occhi in condizione di scarsa illuminazione</string>
+    <string name="dc_dimming_enable_summary_not_supported">DC Dimming non è attualmente supportato dal kernel</string>
+
+    <!-- Pick-up to wake gesture-->
+    <string name="wake_gesture_title">Svegliare</string>
+    <string name="wake_gesture_summary">Svegliare il dispositivo invece di pulsare la notifica</string>
+
+    <!-- Popup camera strings -->
+    <string name="popup_camera_tip">Avvertimento</string>
+    <string name="popup_camera_takeback_failed_calibrate">Impossible di chiudere la fotocamera frontale. Prova calibrare il motore.</string>
+    <string name="popup_camera_popup_failed_calibrate">Impossible di aprire la fotocamera frontale. Prova calibrare il motore.</string>
+    <string name="popup_camera_calibrate_running">Non è possible di usare la fotocamera frontale durante la calibrazione.</string>
+    <string name="popup_camera_calibrate_now">Calibrare</string>
+    <string name="popup_camera_calibrate_failed">Impossible di calibrare</string>
+    <string name="popup_camera_calibrate_success">Calibrato con successo. Può addesso aprire la fotocamera frontale.</string>
+
+    <!-- Thermal profiles -->
+    <string name="thermal_title">Profili thermici</string>
+    <string name="thermal_summary">Regolare per-app profili thermici per prestazioni ottimali</string>
+    <string name="thermal_default">Predefinito</string>
+    <string name="thermal_benchmark">Benchmark</string>
+    <string name="thermal_browser">Browser</string>
+    <string name="thermal_camera">Camera</string>
+    <string name="thermal_dialer">Dialer</string>
+    <string name="thermal_gaming">Gaming</string>
+    <string name="thermal_streaming">Streaming</string>
+</resources>

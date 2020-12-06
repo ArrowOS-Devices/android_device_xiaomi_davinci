@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 The LineageOS Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Popup camera settings -->
+    <string name="popup_title">Paramètres de l\'appareil photo frontale</string>
+    <string name="popup_led_title">LED de la caméra</string>
+    <string name="popup_led_summary">Activer la LED quand la caméra apparaît et se rétracte</string>
+    <string name="popup_sound_title">Effets sonores</string>
+    <string name="popup_sound_muqin">Xylophone</string>
+    <string name="popup_sound_yingyan">Condor</string>
+    <string name="popup_sound_mofa">Magic</string>
+    <string name="popup_sound_jijia">Mecha</string>
+    <string name="popup_sound_chilun">Roue dentée</string>
+    <string name="popup_sound_cangmen">Porte de cabine</string>
+    <string name="popup_calibration_title">Calibration</string>
+    <string name="popup_calibration_summary">Calibrer le moteur de la caméra frontale</string>
+    <string name="popup_calibration_warning_title">Calibration du moteur</string>
+    <string name="popup_calibration_warning_text">Des calibrations inutiles peuvent causer des dégats irréversibles. Il est recommandé de calibrer le moteur de la caméra pop-up seulement si elle ne se comporte pas correctement ou si la caméra est dans une mauvaise position!</string>
+
+    <!-- DC dimming settings -->
+    <string name="dc_dimming_enable_title">DC Dimming</string>
+    <string name="dc_dimming_enable_summary">Réduit la fatigue des yeux dans des conditions de faible luminosité</string>
+    <string name="dc_dimming_enable_summary_not_supported">DC Dimming n\'est pour l\'instant pas supporté par le kernel</string>
+
+    <!-- Pick-up to wake gesture-->
+    <string name="wake_gesture_title">Réveiller</string>
+    <string name="wake_gesture_summary">Wake up the device instead of pulsing notifications</string>
+
+    <!-- Popup camera strings -->
+    <string name="popup_camera_tip">Alerte</string>
+    <string name="popup_camera_takeback_failed_calibrate">Impossible de fermer la caméra frontale. Veuillez calibrer le moteur.</string>
+    <string name="popup_camera_popup_failed_calibrate">Impossible d\'ouvrir la caméra frontale. Veuillez calibrer le moteur.</string>
+    <string name="popup_camera_calibrate_running">La caméra frontale ne peut pas être utilisé pendant la calibration.</string>
+    <string name="popup_camera_calibrate_now">Calibrer</string>
+    <string name="popup_camera_calibrate_failed">Impossible de calibrer</string>
+    <string name="popup_camera_calibrate_success">Calibré avec succès. Vous pouvez maintenant ouvrir la caméra frontale.</string>
+
+    <!-- Thermal profiles -->
+    <string name="thermal_title">Profils thermiques</string>
+    <string name="thermal_summary">Ajuster les profiles thermiques par apps pour une performance optimale</string>
+    <string name="thermal_default">Défaut</string>
+    <string name="thermal_benchmark">Benchmark</string>
+    <string name="thermal_browser">Navigateur</string>
+    <string name="thermal_camera">Caméra</string>
+    <string name="thermal_dialer">Téléphone</string>
+    <string name="thermal_gaming">Gaming</string>
+    <string name="thermal_streaming">Streaming</string>
+</resources>
