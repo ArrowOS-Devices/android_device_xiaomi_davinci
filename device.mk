@@ -117,7 +117,7 @@ PRODUCT_PACKAGES += \
     libshim_megvii
 
 PRODUCT_PACKAGES += \
-    Snap
+    GCamGOPrebuilt
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \

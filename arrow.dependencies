@@ -6,5 +6,9 @@
   {
     "repository": "android_vendor_xiaomi_davinci",
     "target_path": "vendor/xiaomi/davinci"
+  },
+  {
+    "repository": "android_packages_apps_GCamGOPrebuilt",
+    "target_path": "packages/apps/GCamGOPrebuilt"
   }
 ]
