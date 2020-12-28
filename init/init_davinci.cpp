@@ -120,4 +120,8 @@ void vendor_load_properties() {
     if (mod_device != "") {
         property_override("ro.product.mod_device", mod_device.c_str());
     }
+
+#if !defined(__ANDROID_RECOVERY__)
+    property_override("ro.debuggable", "0");
+#endif
 }

@@ -55,3 +55,6 @@ ro.config.low_ram=false
 
 # SurfaceFlinger brightness tweak
 ro.sf.force_light_brightness=1
+
+# Enable debugging
+ro.debuggable=1
