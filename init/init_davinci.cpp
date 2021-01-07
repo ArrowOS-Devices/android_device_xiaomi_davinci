@@ -40,10 +40,6 @@
 
 using android::base::GetProperty;
 
-int property_set(const char *key, const char *value) {
-    return __system_property_set(key, value);
-}
-
 std::vector<std::string> ro_props_default_source_order = {
     "",
     "bootimage.",
@@ -53,35 +49,33 @@ std::vector<std::string> ro_props_default_source_order = {
     "vendor.",
 };
 
-void property_override(char const prop[], char const value[], bool add = true) {
-    prop_info *pi;
+void property_override(char const prop[], char const value[]) {
+    prop_info *pi = (prop_info *) __system_property_find(prop);
 
-    pi = (prop_info *) __system_property_find(prop);
     if (pi)
         __system_property_update(pi, value, strlen(value));
-    else if (add)
+    else
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
 void set_ro_prop(const std::string &prop_type, const std::string &prop, const std::string &value) {
     for (const auto &source : ro_props_default_source_order) {
-	if (prop_type == "build") {
+    	if (prop_type == "build") {
             auto prop_name = "ro." + source + "build." + prop;
             if (source == "")
                 property_override(prop_name.c_str(), value.c_str());
             else
-                property_override(prop_name.c_str(), value.c_str(), false);
-       	}
-	if (prop_type == "product") {
+                property_override(prop_name.c_str(), value.c_str());
+        }
+    	if (prop_type == "product") {
             auto prop_name = "ro.product." + source + prop;
-            property_override(prop_name.c_str(), value.c_str(), false);
+            property_override(prop_name.c_str(), value.c_str());
         }
     }
 }
 
 void vendor_load_properties() {
-    std::string region;
-    region = GetProperty("ro.boot.hwc", "GLOBAL");
+    std::string region = GetProperty("ro.boot.hwc", "GLOBAL");
 
     std::string model;
     std::string device;
@@ -89,22 +83,14 @@ void vendor_load_properties() {
     std::string description;
     std::string mod_device;
 
+    device = "davinci";
+    model = "Redmi K20";
+
     if (region == "GLOBAL") {
         model = "Mi 9T";
-        device = "davinci";
-        fingerprint = "Xiaomi/davinci/davinci:10/QKQ1.190825.002/V12.0.3.0.QFJMIXM:user/release-keys";
-        description = "davinci-user 10 QKQ1.190825.002 V12.0.3.0.QFJMIXM release-keys";
         mod_device = "davinci_global";
-    } else if (region == "CN") {
-        model = "Redmi K20";
-        device = "davinci";
-        fingerprint = "Xiaomi/davinci/davinci:10/QKQ1.190825.002/V12.0.3.0.QFJCNXM:user/release-keys";
-        description = "davinci-user 10 QKQ1.190825.002 V12.0.3.0.QFJCNXM release-keys";
     } else if (region == "INDIA") {
-        model = "Redmi K20";
         device = "davinciin";
-        fingerprint = "Xiaomi/davinciin/davinciin:10/QKQ1.190825.002/V12.0.3.0.QFJINXM:user/release-keys";
-        description = "davinciin-user 10 QKQ1.190825.002 V12.0.3.0.QFJINXM release-keys";
         mod_device = "davinciin_in_global";
     }
 
@@ -122,6 +108,8 @@ void vendor_load_properties() {
     }
 
 #if !defined(__ANDROID_RECOVERY__)
-    property_override("ro.debuggable", "0");
+    if (GetProperty("ro.build.type", "userdebug") != "eng") {
+        property_override("ro.debuggable", "0");
+    }
 #endif
 }
