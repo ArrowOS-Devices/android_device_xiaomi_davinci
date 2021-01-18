@@ -108,7 +108,8 @@ void vendor_load_properties() {
     }
 
 #if !defined(__ANDROID_RECOVERY__)
-    if (GetProperty("ro.build.type", "userdebug") != "eng") {
+  if ((GetProperty("ro.build.type", "userdebug") != "eng") &&
+      (GetProperty("ro.override_debuggable", "1") != "0")) {
         property_override("ro.debuggable", "0");
     }
 #endif
