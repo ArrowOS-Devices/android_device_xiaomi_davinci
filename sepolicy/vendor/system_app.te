@@ -9,3 +9,6 @@ allow system_app { motor_device sysfs_graphics hall_device }:chr_file rw_file_pe
 allow system_app sysfs_dm:file rw_file_perms;
 
 hal_client_domain(system_app, vendor_hal_fm)
+
+set_prop(system_app, parts_prop)
+get_prop(system_server, parts_prop)

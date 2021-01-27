@@ -75,4 +75,10 @@
     <string name="reset_default_button_title">Reset to default configuration</string>
     <string name="reset_default_button_summary">Reset all the configurations of this screen</string>
     <string name="contrast_slider_title">Contrast</string>
+
+    <!-- Fingerprint settings -->
+    <string name="advanced_fingerprint_settings">Advanced fingerprint settings</string>
+    <string name="screen_off_fod_title">Screen off FOD</string>
+    <string name="screen_off_fod_summary">Enabling this will allow you to use the fingerprint while the screen is off</string>
+    <string name="fingerprint_settings_info">Some of this settings may not be available if not using the main user</string>
 </resources>

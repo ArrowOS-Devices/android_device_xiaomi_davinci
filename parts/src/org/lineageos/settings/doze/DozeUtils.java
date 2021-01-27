@@ -87,7 +87,7 @@ public final class DozeUtils {
         return Settings.Secure.getInt(context.getContentResolver(), DOZE_ENABLED, 1) != 0;
     }
 
-    protected static void launchDozePulse(Context context) {
+    public static void launchDozePulse(Context context) {
         if (DEBUG)
             Log.d(TAG, "Launch doze pulse");
         context.sendBroadcastAsUser(
@@ -99,7 +99,7 @@ public final class DozeUtils {
                 enable ? 1 : 0, UserHandle.USER_CURRENT);
     }
 
-    protected static boolean isAlwaysOnEnabled(Context context) {
+    public static boolean isAlwaysOnEnabled(Context context) {
         final boolean enabledByDefault = context.getResources().getBoolean(
                 com.android.internal.R.bool.config_dozeAlwaysOnEnabled);
 
