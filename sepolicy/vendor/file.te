@@ -1,2 +1,2 @@
-type debugfs_sched_features, proc_type, fs_type;
+type debugfs_sched_features, proc_type, fs_type, debugfs_type;
 type proc_touchpanel, proc_type, sysfs_type, fs_type;
