@@ -37,6 +37,7 @@ public class KeyHandler implements DeviceKeyHandler {
         int scanCode = event.getScanCode();
         int userId = ActivityManager.getCurrentUser();
         boolean isScreenOffFodEnabled = SystemProperties.getBoolean(Constants.SCREEN_OFF_FOD_ENABLE_PROP, false);
+        boolean isDozeEnabled = DozeUtils.isDozeEnabled(mContext);
 
         if (DEBUG)
             Log.i(TAG, "handleKeyEvent=" + scanCode);
@@ -48,7 +49,16 @@ public class KeyHandler implements DeviceKeyHandler {
                     && (userId == 0)) {
                     if (DEBUG)
                         Log.d(TAG, "Pulsing the screen as screen off FOD is enabled");
+
+                    // Enable doze if it isn't enabled so the pulse can be executed
+                    if (!isDozeEnabled) {
+                        DozeUtils.enableDoze(mContext, true);
+                    }
+
                     DozeUtils.launchDozePulse(mContext);
+
+                    // Restore the doze status to the original value
+                    DozeUtils.enableDoze(mContext, isDozeEnabled);
                 }
                 return event;
             default:
