@@ -41,6 +41,8 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 
 import org.lineageos.settings.R;
+import org.lineageos.settings.utils.DozeUtils;
+import org.lineageos.settings.doze.DozeServiceUtils;
 
 public class DozeSettingsFragment extends PreferenceFragment
         implements OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
@@ -153,7 +155,7 @@ public class DozeSettingsFragment extends PreferenceFragment
             DozeUtils.enableAlwaysOn(getActivity(), (Boolean) newValue);
         }
 
-        mHandler.post(() -> DozeUtils.checkDozeService(getActivity()));
+        mHandler.post(() -> DozeServiceUtils.checkDozeService(getActivity()));
 
         return true;
     }
@@ -161,7 +163,7 @@ public class DozeSettingsFragment extends PreferenceFragment
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
         DozeUtils.enableDoze(getActivity(), isChecked);
-        DozeUtils.checkDozeService(getActivity());
+        DozeServiceUtils.checkDozeService(getActivity());
 
         mTextView.setText(getString(isChecked ? R.string.switch_bar_on : R.string.switch_bar_off));
         mSwitchBar.setActivated(isChecked);

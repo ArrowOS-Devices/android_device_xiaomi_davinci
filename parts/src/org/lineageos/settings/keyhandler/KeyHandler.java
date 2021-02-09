@@ -15,7 +15,7 @@ import android.view.KeyEvent;
 
 import com.android.internal.os.DeviceKeyHandler;
 
-import org.lineageos.settings.doze.DozeUtils;
+import org.lineageos.settings.utils.DozeUtils;
 import org.lineageos.settings.Constants;
 
 public class KeyHandler implements DeviceKeyHandler {
