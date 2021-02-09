@@ -10,6 +10,7 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import android.os.PowerManager;
 import android.os.SystemProperties;
 import android.view.KeyEvent;
 
@@ -38,6 +39,7 @@ public class KeyHandler implements DeviceKeyHandler {
         int userId = ActivityManager.getCurrentUser();
         boolean isScreenOffFodEnabled = SystemProperties.getBoolean(Constants.SCREEN_OFF_FOD_ENABLE_PROP, false);
         boolean isDozeEnabled = DozeUtils.isDozeEnabled(mContext);
+        boolean isScreenOn = isScreenOn(mContext);
 
         if (DEBUG)
             Log.i(TAG, "handleKeyEvent=" + scanCode);
@@ -46,7 +48,8 @@ public class KeyHandler implements DeviceKeyHandler {
             case KEYCODE_FOD:
                 if (!DozeUtils.isAlwaysOnEnabled(mContext)
                     && isScreenOffFodEnabled
-                    && (userId == 0)) {
+                    && (userId == 0)
+                    && !isScreenOn) {
                     if (DEBUG)
                         Log.d(TAG, "Pulsing the screen as screen off FOD is enabled");
 
@@ -64,5 +67,10 @@ public class KeyHandler implements DeviceKeyHandler {
             default:
                 return event;
         }
+    }
+
+    private boolean isScreenOn(Context context) {
+        PowerManager powerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+        return powerManager.isInteractive();
     }
 }
