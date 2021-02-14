@@ -195,6 +195,12 @@ on property:init.svc.vendor.per_mgr=running
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
 
+on property:vendor.wfdservice=enable
+    setprop fod.should_boost_brightness true
+
+on property:vendor.wfdservice=disable
+    setprop fod.should_boost_brightness true
+
 on charger
     wait /dev/block/platform/soc/1da4000.ufshc/by-name/system
     mount ext4 /dev/block/platform/soc/1da4000.ufshc/by-name/system / ro barrier=1
