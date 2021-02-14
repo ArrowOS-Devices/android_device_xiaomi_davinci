@@ -22,10 +22,15 @@
 #include <fstream>
 #include <cmath>
 #include <thread>
+#include <chrono>
 
 #include <fcntl.h>
 #include <poll.h>
 #include <sys/stat.h>
+
+#include <android-base/properties.h>
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
 
 #define FINGERPRINT_ACQUIRED_VENDOR 6
 
@@ -36,6 +41,9 @@
 #define TOUCH_FOD_ENABLE 10
 
 #define FOD_UI_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display/fod_ui"
+
+#define DELAY_FOR_BRIGHTNESS_BOOST 750
+#define SHOULD_BOOST_BRIGHTNESS_PROP "fod.should_boost_brightness"
 
 #define FOD_SENSOR_X 445
 #define FOD_SENSOR_Y 1931
@@ -60,6 +68,10 @@ static bool readBool(int fd) {
     }
 
     return c != '0';
+}
+
+static bool shouldScreenBoostBrightness() {
+    return (android::base::GetProperty(SHOULD_BOOST_BRIGHTNESS_PROP, "false") == "true");
 }
 
 } // anonymous namespace
@@ -123,10 +135,26 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 }
 
 Return<void> FingerprintInscreen::onPress() {
+    if (!onPressThreadRunning && shouldScreenBoostBrightness()) {
+        isSensorReleased = false;
+        onPressThread = std::thread([&] {
+            onPressThreadRunning = true;
+            std::this_thread::sleep_for(std::chrono::milliseconds(DELAY_FOR_BRIGHTNESS_BOOST));
+            if (!isSensorReleased) {
+                xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_FOD);
+            }
+            onPressThreadRunning = false;
+        });
+        onPressThread.detach();
+    }
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
+    if (shouldScreenBoostBrightness()) {
+        isSensorReleased = true;
+        xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
+    }
     return Void();
 }
 
@@ -181,7 +209,7 @@ Return<int32_t> FingerprintInscreen::getDimAmount(int32_t /* brightness */) {
 }
 
 Return<bool> FingerprintInscreen::shouldBoostBrightness() {
-    return false;
+    return shouldScreenBoostBrightness();
 }
 
 Return<void> FingerprintInscreen::setCallback(const sp<IFingerprintInscreenCallback>& callback) {

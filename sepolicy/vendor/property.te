@@ -2,3 +2,5 @@
 type power_prop, property_type;
 
 type parts_prop, property_type, extended_core_property_type;
+
+type fod_prop, property_type;

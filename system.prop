@@ -51,3 +51,6 @@ ro.sf.force_light_brightness=1
 
 # Enable debugging
 ro.debuggable=1
+
+# Whether to enable or disable display brightness boost for recognizing the fingerprint
+fod.should_boost_brightness=false

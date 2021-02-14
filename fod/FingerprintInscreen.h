@@ -20,6 +20,7 @@
 #include <vendor/lineage/biometrics/fingerprint/inscreen/1.0/IFingerprintInscreen.h>
 #include <vendor/xiaomi/hardware/fingerprintextension/1.0/IXiaomiFingerprint.h>
 #include <vendor/xiaomi/hardware/touchfeature/1.0/ITouchFeature.h>
+#include <thread>
 
 namespace vendor {
 namespace lineage {
@@ -60,6 +61,10 @@ private:
 
     std::mutex mCallbackLock;
     sp<IFingerprintInscreenCallback> mCallback;
+
+    std::thread onPressThread;
+    bool onPressThreadRunning;
+    bool isSensorReleased;
 };
 
 }  // namespace implementation
