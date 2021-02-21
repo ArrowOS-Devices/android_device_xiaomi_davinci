@@ -19,3 +19,10 @@ cc_library_shared {
     proprietary: true,
     srcs: ["megvii_shim.cpp"],
 }
+
+cc_library_shared {
+    name: "libmedia_jni_shim",
+
+    shared_libs: ["libmedia"],
+    srcs: ["libmedia_jni.cpp"],
+}
