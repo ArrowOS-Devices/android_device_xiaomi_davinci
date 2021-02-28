@@ -80,5 +80,5 @@
     <string name="advanced_fingerprint_settings">Расширенные настройки отпечатков пальцев</string>
     <string name="screen_off_fod_title">Отпечаток пальцев на выключенном экране</string>
     <string name="screen_off_fod_summary">Включений этой опации позволит вам использовать отпечаток пальца, когда экран выключен</string>
-    <string name="fingerprint_settings_info">Некоторые из этих настроек могут быть недоступны, если не используется основной пользователь</string>
+    <string name="fingerprint_settings_info">Некоторые из этих настроек могут быть недоступны, если используется не основной пользователь</string>
 </resources>
