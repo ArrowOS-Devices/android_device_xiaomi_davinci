@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Popup camera settings -->
+    <string name="popup_title">Настройки фронтальной камеры</string>
+    <string name="popup_led_title">Светодиод камеры</string>
+    <string name="popup_led_summary">Включать индикацию светодиодом, когда передняя камера появляется и убирается</string>
+    <string name="popup_title_muqin">Ксилофон</string>
+    <string name="popup_title_yingyan">Кондор</string>
+    <string name="popup_title_mofa">Магия</string>
+    <string name="popup_title_jijia">Меха</string>
+    <string name="popup_title_chilun">Шестерня</string>
+    <string name="popup_title_cangmen">Дверь кабины</string>
+    <string name="popup_calibration_title">Калибровка</string>
+    <string name="popup_calibration_summary">Откалибруйте мотор выдвижной камеры</string>
+    <string name="popup_calibration_warning_title">Калибровка мотора</string>
+    <string name="popup_calibration_warning_text">Частое использование калибровки может привести к необратимому повреждению. Рекомендуется откалибровать мотор всплывающей камеры только в случае, если он не двигается должным образом или находится в неправильном положении!</string>
+
+    <!-- DC dimming settings -->
+    <string name="dc_dimming_enable_title">DC Dimming</string>
+    <string name="dc_dimming_enable_summary">DC Dimming снижает нагрузку на глаза в условиях низкой освещенности</string>
+    <string name="dc_dimming_enable_summary_not_supported">DC Dimming в настоящее время не поддерживается ядром</string>
+
+    <!-- Pick-up to wake gesture-->
+    <string name="wake_gesture_title">Поднять для пробуждения</string>
+    <string name="wake_gesture_summary">Возьмите телефон для пробуждения устройства</string>
+
+    <!-- Popup camera strings -->
+    <string name="popup_camera_tip">Предупреждение</string>
+    <string name="popup_camera_takeback_failed_calibrate">Не удалось закрыть переднюю камеру. Попробуйте откалибровать моторчик.</string>
+    <string name="popup_camera_popup_failed_calibrate">Не удалось открыть переднюю камеру. Попробуйте откалибровать моторчик.</string>
+    <string name="popup_camera_calibrate_running">Фронтальную камеру нельзя использовать во время калибровки.</string>
+    <string name="popup_camera_calibrate_now">Калибровка</string>
+    <string name="popup_camera_calibrate_failed">Не удалось откалибровать</string>
+    <string name="popup_camera_calibrate_success">Калибровка проведена успешно. Теперь вы можете открыть переднюю камеру.</string>
+
+    <!-- Thermal profiles -->
+    <string name="thermal_title">Профили оптимизации</string>
+    <string name="thermal_summary">Установите профили температуры для оптимальной производительности приложений</string>
+    <string name="thermal_default">По умолчанию</string>
+    <string name="thermal_benchmark">Бенчмарк</string>
+    <string name="thermal_browser">Браузер</string>
+    <string name="thermal_camera">Камера</string>
+    <string name="thermal_dialer">Звонки</string>
+    <string name="thermal_gaming">Игры</string>
+    <string name="thermal_streaming">Стриминг</string>
+
+    <!-- Kcal settings -->
+    <string name="kcal_settings_title">Цвета дисплея</string>
+    <string name="kcal_settings_summary">Отрегулируйте цвета вашего дисплея</string>
+    <string name="kcal_enable_title">Включить настройку цветов дисплея</string>
+    <string name="kcal_enable_summary">Включает настройки цветов экрана для его редактирования</string>
+    <string name="kcal_not_supported">Настройки цвета дисплея не поддерживаются ядром</string>
+    <string name="red_slider_title">Красный</string>
+    <string name="green_slider_title">Зеленый</string>
+    <string name="blue_slider_title">Синий</string>
+    <string name="kcal_rgb_preference_category_title">RGB</string>
+    <string name="kcal_calibration_preference_category_title">Калибровка цветов</string>
+    <string name="saturation_slider_title">Насыщенность</string>
+    <string name="reset_default_button_title">Сбросить настройки</string>
+    <string name="reset_default_button_summary">Сбрасывает все настройки цветов экрана</string>
+    <string name="contrast_slider_title">Контраст</string>
+
+    <!-- Fingerprint settings -->
+    <string name="advanced_fingerprint_settings">Расширенные настройки отпечатков пальцев</string>
+    <string name="screen_off_fod_title">Отпечаток пальцев на выключенном экране</string>
+    <string name="screen_off_fod_summary">Включений этой опации позволит вам использовать отпечаток пальца, когда экран выключен</string>
+    <string name="fingerprint_settings_info">Некоторые из этих настроек могут быть недоступны, если используется не основной пользователь</string>
+</resources>
