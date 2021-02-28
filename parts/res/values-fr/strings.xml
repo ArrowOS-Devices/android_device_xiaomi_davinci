@@ -13,7 +13,7 @@
 -->
 <resources>
     <!-- Popup camera settings -->
-    <string name="popup_title">Paramètres de l\'appareil photo frontale</string>
+    <string name="popup_title">Paramètres de la caméra frontale</string>
     <string name="popup_led_title">LED de la caméra</string>
     <string name="popup_led_summary">Activer la LED quand la caméra apparaît et se rétracte</string>
     <string name="popup_sound_title">Effets sonores</string>
@@ -35,7 +35,7 @@
 
     <!-- Pick-up to wake gesture-->
     <string name="wake_gesture_title">Réveiller</string>
-    <string name="wake_gesture_summary">Wake up the device instead of pulsing notifications</string>
+    <string name="wake_gesture_summary">Réveille l\'appareil à la place d\'afficher les notifications pulsantes</string>
 
     <!-- Popup camera strings -->
     <string name="popup_camera_tip">Alerte</string>
@@ -48,7 +48,7 @@
 
     <!-- Thermal profiles -->
     <string name="thermal_title">Profils thermiques</string>
-    <string name="thermal_summary">Ajuster les profiles thermiques par apps pour une performance optimale</string>
+    <string name="thermal_summary">Ajuster les profils thermiques par applications pour une performance optimale</string>
     <string name="thermal_default">Défaut</string>
     <string name="thermal_benchmark">Benchmark</string>
     <string name="thermal_browser">Navigateur</string>
@@ -56,4 +56,27 @@
     <string name="thermal_dialer">Téléphone</string>
     <string name="thermal_gaming">Gaming</string>
     <string name="thermal_streaming">Streaming</string>
+
+    <!-- Kcal settings -->
+    <string name="kcal_settings_title">Couleurs d\'affichage</string>
+    <string name="kcal_settings_summary">Ajuste la couleur de votre écran</string>
+    <string name="kcal_enable_title">Activer la configuration de couleur d\'affichage</string>
+    <string name="kcal_enable_summary">Permet d\'ajuster les couleurs de l\'écran</string>
+    <string name="kcal_not_supported">Le réglage des couleurs d\'affichage n\'est pas supporté par le kernel</string>
+    <string name="red_slider_title">Rouge</string>
+    <string name="green_slider_title">Vert</string>
+    <string name="blue_slider_title">Bleu</string>
+    <string name="kcal_rgb_preference_category_title">RVB</string>
+    <string name="kcal_calibration_preference_category_title">Calibration des couleurs</string>
+    <string name="saturation_slider_title">Saturation</string>
+    <string name="reset_default_button_title">Réinitialisation de la configuration par défaut</string>
+    <string name="reset_default_button_summary">Réinitialisation de toutes les configurations de l\'écran</string>
+    <string name="contrast_slider_title">Contraste</string>
+
+    <!-- Fingerprint settings -->
+    <string name="advanced_fingerprint_settings">Paramètres d\'empreinte avancés</string>
+    <string name="screen_off_fod_title">Empreinte sur l\'écran éteint</string>
+    <string name="screen_off_fod_summary">Permet d\'utiliser l\'empreinte digitale lorsque l\'écren est éteint</string>
+    <string name="fingerprint_settings_info">Certains de ces paramètres peuvent ne pas être disponibles si vous êtes un utilisateur secondaire</string>
 </resources>
+
