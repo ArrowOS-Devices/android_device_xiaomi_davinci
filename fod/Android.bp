@@ -40,6 +40,11 @@ cc_binary {
 cc_library_static {
     name: "libfod_extension.davinci",
     srcs: ["FodExtension.cpp"],
+
+    header_libs: [
+        "generated_kernel_headers",
+    ],
+
     include_dirs: [
         "frameworks/native/services/surfaceflinger/CompositionEngine/include"
     ],
