@@ -116,8 +116,7 @@ PRODUCT_PACKAGES += \
     libjni_jpegutil
 
 PRODUCT_PACKAGES += \
-    libshim_megvii \
-    libmedia_jni_shim
+    libshim_megvii
 
 PRODUCT_PACKAGES += \
     GCamGOPrebuilt
