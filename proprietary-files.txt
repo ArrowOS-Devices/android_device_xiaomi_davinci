@@ -906,10 +906,10 @@ system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 -system_ext/priv-app/WfdService/WfdService.apk
 
 # WiFi Display (vendor)
-vendor/bin/wfdhdcphalservice
+vendor/bin/wfdhdcphalservice|047b81f6902ec29606dc72443dc74b58e83153b2
 vendor/bin/wfdvndservice
 vendor/bin/wifidisplayhalservice
-vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc
+vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc|c266f08783a17f6583e3f22c85e55b0c200442ea
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
 vendor/etc/init/wfdvndservice.rc
 vendor/etc/seccomp_policy/wfdhdcphalservice.policy
