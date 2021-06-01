@@ -44,19 +44,20 @@ typedef struct amp_device {
 
 static tfa_t* tfa_dev = NULL;
 
+static struct pcm_config pcm_config_tfa98xx = {
+    .channels = 2,
+    .rate = 48000,
+    .period_size = 256,
+    .period_count = 4,
+    .format = PCM_FORMAT_S16_LE,
+    .start_threshold = 0,
+    .stop_threshold = INT_MAX,
+    .avail_min = 0,
+};
+
 int tfa98xx_feedback(void* adev, uint32_t snd_device, bool enable) {
     tfa_dev->adev = (struct audio_device*)adev;
     int pcm_dev_tx_id = 0, rc = 0;
-    struct pcm_config pcm_config_tfa98xx = {
-            .channels = 2,
-            .rate = 48000,
-            .period_size = 256,
-            .period_count = 4,
-            .format = PCM_FORMAT_S16_LE,
-            .start_threshold = 0,
-            .stop_threshold = INT_MAX,
-            .silence_threshold = 0,
-    };
 
     if (!tfa_dev) {
         ALOGE("%d: Invalid params", __LINE__);
