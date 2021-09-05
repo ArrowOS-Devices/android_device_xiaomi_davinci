@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021 The ArrowOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -83,7 +83,7 @@ PRODUCT_COPY_FILES += \
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-arrow
 
 # Power
 PRODUCT_COPY_FILES += \
