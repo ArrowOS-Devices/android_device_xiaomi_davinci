@@ -5,6 +5,7 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
+        "1804800",
         "1248000"
       ],
       "DefaultIndex": 0,
@@ -16,7 +17,8 @@
       "Values": [
         "9999999",
         "1248000",
-        "576000"
+        "576000",
+        "300000"
       ],
       "ResetOnInit": true
     },
@@ -25,7 +27,7 @@
       "Path": "/sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
-        "1939200",
+        "1843200",
         "1555200"
       ],
       "DefaultIndex": 0,
@@ -37,7 +39,7 @@
       "Values": [
         "9999999",
         "1555200",
-        "1248000",
+        "1209600",
         "652800"
       ],
       "ResetOnInit": true
@@ -104,7 +106,7 @@
       "Name": "TASchedtuneBoost",
       "Path": "/dev/stune/top-app/schedtune.boost",
       "Values": [
-        "40",
+        "20",
         "10"
       ],
       "ResetOnInit": true
@@ -319,7 +321,7 @@
       "PowerHint": "INTERACTION",
       "Node": "TASchedtuneBoost",
       "Duration": 0,
-      "Value": "40"
+      "Value": "20"
     },
     {
       "PowerHint": "INTERACTION",
