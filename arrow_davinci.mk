@@ -14,6 +14,8 @@ $(call inherit-product, device/xiaomi/davinci/device.mk)
 # Inherit some common Arrow stuff.
 $(call inherit-product, vendor/arrow/config/common.mk)
 
+DEVICE_MAINTAINER := RemyL
+
 PRODUCT_NAME := arrow_davinci
 PRODUCT_DEVICE := davinci
 PRODUCT_BRAND := Xiaomi
