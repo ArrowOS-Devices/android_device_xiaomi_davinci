@@ -1,8 +1,7 @@
 [
   {
     "repository": "android_device_xiaomi_sm6150-common",
-    "target_path": "device/xiaomi/sm6150-common",
-    "branch": "arrow-13.1-davinci"
+    "target_path": "device/xiaomi/sm6150-common"
   },
   {
     "repository": "android_vendor_xiaomi_davinci",
@@ -10,12 +9,11 @@
   },
   {
     "repository": "android_vendor_xiaomi_sm6150-common",
-    "target_path": "vendor/xiaomi/sm6150-common",
-    "branch": "arrow-13.1-davinci"
+    "target_path": "vendor/xiaomi/sm6150-common"
   },
   {
     "repository": "android_kernel_xiaomi_davinci",
-    "target_path": "kernel/xiaomi/sm6150-common"
+    "target_path": "kernel/xiaomi/sm6150"
   },
   {
     "repository": "android_hardware_xiaomi",
